@@ -116,7 +116,10 @@ final class ILPQueryBuilder
         $parts = [];
         if (count($this->tags)) {
             array_push($parts, $this->serializeArray($this->tags));
+        } else {
+            array_push($parts, '');
         }
+
         if (count($this->fields)) {
             array_push($parts, $this->serializeArray($this->fields));
         }
